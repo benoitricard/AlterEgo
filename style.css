@@ -22,15 +22,20 @@ body {
 header {
     background: #303030;
     height: 180px;
-    margin-top: -35px;
+    display: flex;
+    justify-content: space-between;
 }
 header h1 {
     font-family: 'Akira Expanded';
     font-size: 50px;
-    line-height: 150px;
+    line-height: 80px;
     margin-left: 100px;
     cursor: pointer;
     color: white;
+}
+header h1:hover + #revenir_page1 {
+    transform: translateY(0);
+    opacity: 100%;
 }
 header h1 span {
     color: #c78eff;
@@ -40,8 +45,74 @@ header p {
     font-size: 18px;
     font-style: italic;
     margin-left: 100px;
-    margin-top: -80px;
+    margin-top: -50px;
     color: white;
+}
+header h2 {
+    color: black;
+    font-family: 'Space Mono';
+    background: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+#revenir_page1 {
+    position: absolute;
+    color: #c78eff;
+    top: 115px;
+    left: 380px;
+    font-family: 'Akira Expanded';
+    font-size: 15px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 1000ms;
+}
+
+
+
+/**************************************
+************* AFFICHAGE ***************
+***************************************/
+#buttons_affichage {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 -20px 100px;
+    font-family: 'SF Compact';
+}
+#button_little, #button_normal, #button_great {
+    min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    padding: 15px;
+    border-radius: 10px;
+    border: solid white 4px;
+    background: #c78eff;
+    cursor: pointer;
+    margin-right: 20px;
+}
+#button_great {
+    margin-right: 20px;
+}
+.affichage_icon {
+    color: white;
+    font-size: 30px;
+    position: relative;
+}
+.fa-th {
+    left: 1.5px;
+}
+.fa-th-large {
+    left: 2px;
+}
+.fa-square {
+    left: 3.5px;
+}
+#buttons_affichage p {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
@@ -132,7 +203,7 @@ header p {
     height: 250%;
     background: #e4e4e4;
 }
-.card p {
+.card_p {
     background: #303030;
     color: white;
     position: absolute;
@@ -205,6 +276,67 @@ header p {
 }
 
 
+
+/***********************************
+************* FOOTER ***************
+************************************/
+footer {
+    background: #303030;
+    height: 150px;
+    margin-top: -35px;
+    color: white;
+    font-family: 'SF Compact';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    text-align: center;
+    font-size: 20px;
+}
+footer p a {
+    text-decoration: none;
+    color: #c78eff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+/***********************************
+************* CLICK ****************
+************************************/
+#click {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#click h2 {
+    font-family: 'Akira Expanded';
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    background: white;
+    padding: 25px;
+    width: 500px;
+    border-radius: 10px;
+    border: solid #000 5px;
+}
+.fa-arrow-circle-down {
+    color: #c78eff;
+    font-size: 50px;
+    animation: arrow 2000ms infinite both;
+    margin-bottom: 30px;
+}
+@keyframes arrow {
+    from {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
 
 
 

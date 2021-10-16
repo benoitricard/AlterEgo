@@ -112,7 +112,7 @@ fetch(`https://myheroacademiaapi.com/api/character/${id}`)
 
         <div id="fight_info">
             <p class="fight_title title">Fight</p>
-            <p class="categories" id="alter"><i class="fas fa-fire"></i>Quirk - <span class="bold_categories">${character.quirk || 'Unknown'}</span></p>
+            <p class="categories" id="alter"><i class="fas fa-fire"></i>Alter - <span class="bold_categories">${character.quirk || 'Unknown'}</span></p>
             <p class="categories" id="fightstyle"><i class="fas fa-fist-raised"></i>Fightstyle - <span class="bold_categories">${character.fightstyle || 'Unknown'}</span></p>
             <p class="categories" id="epithet"><i class="fas fa-fire"></i>Epithet - <span class="bold_categories">${character.epithet || 'Unknown'}</span></p>
             <p class="categories" id="teams"><i class="fas fa-users"></i>Teams - <span class="bold_categories">${character.teams || 'Unknown'}</span></p>

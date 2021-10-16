@@ -7,7 +7,7 @@
 
         <script src="https://kit.fontawesome.com/2fda14c063.js" crossorigin="anonymous"></script>
 
-        <script defer src="dynamic.js"></script>
+        <script defer src="index.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Space+Mono">
 
@@ -16,11 +16,36 @@
     <body>
 
         <header>
-            <h1 onclick="location.href='index.html?id=1';">Alter<span>Ego</span></h1>
-            <p>Rencontrez votre prochain AlterEgo</p>
+
+            <div id="header-logo">
+                <h1 onclick="location.href='index.html';">Alter<span>Ego</span></h1>
+                <p id="revenir_page1"><i class="fas fa-chevron-right"></i>Revenir a l' index</p>
+                <p>Rencontrez votre prochain AlterEgo</p>   
+            </div>
+            <div id="header-version">
+                <h2>Beta</h2>
+            </div>
+
         </header>
 
+        <section id="buttons_affichage">
+
+            <button id="button_little"><i class="fas affichage_icon fa-th"></i></button>
+            <button id="button_normal"><i class="fas affichage_icon fa-th-large"></i></button>
+            <button id="button_great"><i class="fas affichage_icon fa-square"></i></button>
+
+            <p>Affichage</p>
+
+        </section>
+
         <section id="cards"></section>
+
+        <section id="click">
+
+            <h2>Cliquez sur une page pour continuer</h2>
+            <i class="fas fa-arrow-circle-down"></i>
+
+        </section>
 
         <section id="legend">
 
@@ -37,7 +62,7 @@
             </div>
 
             <div class="legend_pin"> <!-- Male -->
-                <i class="fas fa-grip-lines-vertical jail1"></i>Arrested, Emprisoned
+                <i class="fas fa-grip-lines-vertical jail1"></i>Arrested, Imprisoned
             </div>
 
             <div class="legend_pin"> <!-- Male -->
@@ -45,7 +70,7 @@
             </div>
 
             <div class="legend_pin"> <!-- Male -->
-                <i class="fas fa-question heart1"></i>Unknown
+                <i class="fas fa-question unknown1"></i>Unknown
             </div>
 
         </section>
@@ -53,6 +78,12 @@
         <section id="informations"></section>
 
         <section id="pages"></section>
+
+        <footer>
+
+            <p>Ressources<br><a href="https://myheroacademiaapi.com" target="_blank">My Hero Academia API</a></p>
+
+        </footer>
 
     </body>
 
