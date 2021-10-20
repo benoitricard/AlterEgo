@@ -26,7 +26,8 @@ header {
     justify-content: space-between;
 }
 header h1 {
-    font-family: 'Akira Expanded';
+    font-family: 'Akira Expanded', sans-serif;
+    text-transform: uppercase;
     font-size: 50px;
     line-height: 80px;
     margin-left: 100px;
@@ -41,7 +42,7 @@ header h1 span {
     color: #c78eff;
 }
 header p {
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
     font-size: 18px;
     font-style: italic;
     margin-left: 100px;
@@ -50,7 +51,7 @@ header p {
 }
 header h2 {
     color: black;
-    font-family: 'Space Mono';
+    font-family: 'Space Mono', sans-serif;
     background: white;
     padding: 15px 30px;
     border-radius: 10px;
@@ -63,7 +64,7 @@ header h2 {
     color: #c78eff;
     top: 115px;
     left: 380px;
-    font-family: 'Akira Expanded';
+    font-family: 'Akira Expanded', sans-serif;
     font-size: 15px;
     transform: translateX(-100%);
     opacity: 0;
@@ -79,40 +80,47 @@ header h2 {
     display: flex;
     align-items: center;
     margin: 30px 0 -20px 100px;
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
 }
 #button_little, #button_normal, #button_great {
-    min-width: 70px;
-    min-height: 70px;
-    max-width: 70px;
-    max-height: 70px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
     padding: 15px;
-    border-radius: 10px;
-    border: solid white 4px;
+    border-radius: 6px;
+    border: solid white 3px;
     background: #c78eff;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 10px;
 }
-#button_great {
-    margin-right: 20px;
+#button_little:hover, #button_normal:hover, #button_great:hover {
+    background: #b76eff!important;
+}
+#button_normal {
+    background: #ab56ff;
 }
 .affichage_icon {
     color: white;
-    font-size: 30px;
+    font-size: 18px;
     position: relative;
 }
 .fa-th {
-    left: 1.5px;
+    right: 6.8px;
+    top: -5.8px;
 }
 .fa-th-large {
-    left: 2px;
+    right: 6.3px;
+    top: -5.8px;
 }
 .fa-square {
-    left: 3.5px;
+    right: 6px;
+    top: -5.8px;
 }
 #buttons_affichage p {
     font-size: 18px;
     font-weight: 500;
+    margin-right: 20px;
 }
 
 
@@ -125,7 +133,7 @@ header h2 {
     text-align: center;
 }
 #informations p {
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
     font-size: 20px;
 }
 
@@ -213,7 +221,7 @@ header h2 {
     width: 100%;
     text-align: center;
     border-top: solid #f0f0f0 4px;
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
     font-weight: 700;
 }
 
@@ -233,7 +241,7 @@ header h2 {
     background: #c78eff;
     color: white;
     border: none;
-    font-family: 'Space Mono';
+    font-family: 'Space Mono', sans-serif;
     border-radius: 100%;
     font-size: 20px;
     margin: 10px;
@@ -255,12 +263,12 @@ header h2 {
     align-items: center;
     justify-content: center;
     margin: 20px 30px 70px 30px;
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
     font-size: 20px;
 }
 .legend_pin {
     margin: 0 30px;
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
     font-size: 20px;
 }
 .legend_pin i {
@@ -285,7 +293,7 @@ footer {
     height: 150px;
     margin-top: -35px;
     color: white;
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,7 +321,7 @@ footer p a {
     align-items: center;
 }
 #click h2 {
-    font-family: 'Akira Expanded';
+    font-family: 'Akira Expanded', sans-serif;
     text-align: center;
     margin-top: -50px;
     margin-bottom: 50px;
@@ -395,10 +403,10 @@ footer p a {
     margin-bottom: -50px;
 }
 #character_informations p {
-    font-family: 'SF Compact';
+    font-family: 'SF Compact', 'Roboto';
 }
 #name {
-    font-family: 'Akira Expanded'!important;
+    font-family: 'Akira Expanded', sans-serif!important;
     font-size: 50px;
     margin-top: 20px;
 }
@@ -418,7 +426,7 @@ footer p a {
     color: white;
 }
 .title {
-    font-family: 'Akira Expanded'!important;
+    font-family: 'Akira Expanded', sans-serif!important;
     background: white;
     color: #c78eff;
     width: 200px;

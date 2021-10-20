@@ -1,8 +1,11 @@
 'use strict'
 
+// récupération de l'id en url
 let param = new URLSearchParams(window.location.search) // récupération de l'id de la page
 let id = param.get('id') // id de la page
+// fin de récupération de l'id en url
 
+// appel de l'API
 fetch(`https://myheroacademiaapi.com/api/character/${id}`)
 .then(function response(res) {
     if (res.ok) {
@@ -175,3 +178,4 @@ fetch(`https://myheroacademiaapi.com/api/character/${id}`)
 .catch((error) => {
     console.error(`Cette requête n'a pas pu aboutir ` + '- ' + error)
 })
+// fin d'appel de l'API

@@ -1,14 +1,18 @@
 'use strict'
 
+// création des boutons de pages
 let pages = 16 // nombre de pages
 for (let i = 1; i <= pages; i++) {
     const button = `<button id="${[i]}" onclick="location.href='index.html?id=${[i]}';">${[i]}</button>`
     const pages = document.getElementById('pages')
     pages.innerHTML += button
 }
+// fin de création des boutons de pages
 
+// récupération de l'id en url
 let param = new URLSearchParams(window.location.search) // récupération de l'id de la page
 let id = param.get('id') // id de la page
+// fin de récupération de l'id en url
 
 // index de base (sans numéro de page)
 const revenirPageMsg = document.getElementById('revenir_page1')
@@ -25,10 +29,32 @@ if (id == null) {
 }
 // fin d'index de base (sans numéro de page)
 
+// style des boutons de page
 const actualPage = document.getElementById(id)
 actualPage.style.backgroundColor = "#000"
 actualPage.style.color = "#fff"
+// fin de style des boutons de page
 
+fetch("https://apex-legends.p.rapidapi.com/stats/shadixvolt/ps4", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "apex-legends.p.rapidapi.com",
+		"x-rapidapi-key": "78e161bf78msh243a4f91951cfbap1650d6jsn82df877d9210"
+	}
+})
+.then(function response(res) {
+    if (res.ok) {
+        return res.json()
+    }
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+
+// appel de l'API
 fetch(`https://myheroacademiaapi.com/api/character?page=${id}`)
 .then(function response(res) {
     if (res.ok) {
@@ -171,3 +197,4 @@ fetch(`https://myheroacademiaapi.com/api/character?page=${id}`)
 .catch((error) => {
     console.error(`Cette requête n'a pas pu aboutir ` + '- ' + error)
 })
+// fin d'appel de l'API
